@@ -265,7 +265,7 @@ image-rendering: crisp-edges;
 }
 @media (max-width: 490px) {
   .hide{
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .ship{
     position: relative;
