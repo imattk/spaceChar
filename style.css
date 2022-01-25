@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=DM+Serif+Display&family=Krona+One&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Krona One', sans-serif;
+  cursor: crosshair;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: url(images/stars.png);
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
+.ship, .dest, .char, .advent, .home{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: rgb(33, 74, 95);
+    border-radius: 70%;
+    
+    
+  }
+.ship{
+    position: relative;
+    left: 25%;
+    top: 175px;
+    
+  }
+.dest{
+    position: relative;
+    left: 60%;
+    top: 175px;
+  }
+  .char{
+    position: relative;
+    left: 10%;
+    top: 350px;
+  
+  }
+  .advent{
+    position: relative;
+    left: 65%;
+    top: 500px;
+  }
+  .home{
+    position: relative;
+    left: 0;
+    top: 0px;
+    opacity: 5;
+  }
+  h1{
+    color: #fff;
+  }
+  .transition-fade{
+    opacity: 1;
+    transition: 2s;
+    transform: translateY(0);
+
+  }
+  html.is-animating .transition-fade{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  html.is-leaving .transition-fade{
+    opacity: 0;
+    transform: translateY(0);
+  }
+  div {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 50vw;
+    height: 100vh;
+    background-size: 100%;
+    background-repeat: none;
+  }
+  @keyframes spin {
+      from {transform: rotate(0deg); }
+      to {transform: rotate(360deg); }
+  }
+  @keyframes spin2 {
+    from {transform: rotate(0deg); }
+    to {transform: rotate(360deg); }
+}
+  .background {
+      animation: spin 106s infinite;
+    background-image: url(images/scificircle1.png);
+    position: fixed;
+    overflow: hidden;
+    background-repeat: no-repeat;
+  }
+  
+  .foreground {
+    background-image: url(images/scificircle2.png);
+    animation: spin2 195s infinite;
+    padding-bottom: 25px;
+    position: fixed;
+    overflow: hidden;
+    background-repeat: no-repeat;
+  }
+  img{
+    padding-top: 55px;
+    height: 100vh;
+    width: 33%;
+    transition: .2s;
+    margin-top: 5px;
+    padding-left: 10px;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+image-rendering: -o-crisp-edges; /* Opera */
+image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+image-rendering: crisp-edges;
+-ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+
+  }
+  img:hover{
+    transform: scale(1.1);
+  }
+  .battle{
+    width: 100vw;
+    height: 40%;
+    padding: 10px;
+   
+   
+  }
+    
+  
+  .play{ 
+       
+    width: 33%;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px ;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-indent: 50px;
+  }
+  .trailer{
+    position:absolute ;
+    top: 0%;
+    left: 0%;
+    transform: translateY(-50%, -50%);
+    z-index: 100000;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+}
+.trailer.active{
+    visibility: visible;
+    opacity: 1;
+}
+.trailer video{
+    max-width: 900px;
+    outline: none;
+}
+.close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+    font-size: 40px;
+      
+
+}
+@media (max-width: 1058px) {
+  img {
+    padding-left: 10%;
+    
+   width: 75%;
+   height: 70vh;
+   image-rendering: -moz-crisp-edges; /* Firefox */
+image-rendering: -o-crisp-edges; /* Opera */
+image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+image-rendering: crisp-edges;
+-ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  }
+  .transition-fade{
+    opacity: 1;
+    transition: 2s;
+    transform: translateY(0);
+
+  }
+  html.is-animating .transition-fade{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  html.is-leaving .transition-fade{
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  
+  .ship{
+    position: relative;
+    left: 25%;
+    top: 160px;
+    
+  }
+  .dest{
+    position: relative;
+    left: 30%;
+    top: 200px;
+  }
+  .char{
+    position: relative;
+    left: 35%;
+    top: 350px;
+  
+  }
+  .advent{
+    position: relative;
+    left: 40%;
+    top: 425px;
+  }
+}
+@media (max-width: 687px) {
+  img{
+    width: 100vw;
+    height: 75vh;
+    margin-left: 0px;
+
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  }
+  .ship{
+    position: relative;
+    left: 25%;
+    top: 160px;
+    
+  }
+  .dest{
+    position: relative;
+    left: 20%;
+    top: 200px;
+  }
+  .char{
+    position: relative;
+    left: 20%;
+    top: 350px;
+  
+  }
+  .advent{
+    position: relative;
+    left: 20%;
+    top: 425px;
+  }
+  .home{
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 490px) {
+  .hide{
+    overflow: hidden;
+  }
+  .ship{
+    position: relative;
+    left: 20%;
+    top: 75px;
+    
+  }
+  .dest{
+    position: relative;
+    left: 6%;
+    top: 175px;
+  }
+  .char{
+    position: relative;
+    left: 10%;
+    top: 350px;
+  
+  }
+  .advent{
+    position: relative;
+    left: 8%;
+    top: 500px;
+  }
+  .ship, .dest, .char, .advent, .home{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: rgb(33, 74, 95);
+    border-radius: 70%;
+   
+  }
+  
+  .warriors{
+    width: 100vw;
+   
+    overflow-x: hidden;
+    padding-top:50px ;
+  }
+   .ships{
+    width: 75vw;
+    height: 50%;
+    padding-top: 150px;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+image-rendering: -o-crisp-edges; /* Opera */
+image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+image-rendering: crisp-edges;
+-ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  }
+  .planet{
+    width: 100vw;
+    height: 30vh;
+    padding-top: 15px;
+    margin: 10px;
+    padding-right: 20px;
+    
+  }
+  .home{
+    position: fixed;
+    margin: 10px, 0px, 5px, 120px;
+    opacity: 999;
+    
+  }
+  .trailer video{
+    width: 100vw;
+    height: 50vh;
+  }
+}
